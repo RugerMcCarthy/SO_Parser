@@ -12,8 +12,8 @@ public class ElfType64 {
     public elf64_hdr hdr;
     public elf64_phdr phdr;
     public elf64_shdr shdr;
-    public ArrayList<ElfType64.elf64_phdr> phdrList = new ArrayList();//可能会有多个程序头
-    public ArrayList<ElfType64.elf64_shdr> shdrList = new ArrayList();//可能会有多个段头
+    public ArrayList<ElfType64.elf64_phdr> phdrList = new ArrayList();
+    public ArrayList<ElfType64.elf64_shdr> shdrList = new ArrayList();
 
     public ElfType64() {
         rel = new elf64_rel();

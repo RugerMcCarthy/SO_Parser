@@ -10,9 +10,9 @@ public class ElfType32 {
     public elf32_rela rela;
     public ArrayList<Elf32_Sym> symList = new ArrayList<Elf32_Sym>();
     public elf32_hdr hdr;//elf头部信息
-    public ArrayList<elf32_phdr> phdrList = new ArrayList<elf32_phdr>();//可能会有多个程序头
-    public ArrayList<elf32_shdr> shdrList = new ArrayList<elf32_shdr>();//可能会有多个段头
-    public ArrayList<elf32_strtb> strtbList = new ArrayList<elf32_strtb>();//可能会有多个字符串值
+    public ArrayList<elf32_phdr> phdrList = new ArrayList<elf32_phdr>();
+    public ArrayList<elf32_shdr> shdrList = new ArrayList<elf32_shdr>();
+    public ArrayList<elf32_strtb> strtbList = new ArrayList<elf32_strtb>();
 
     public ElfType32() {
         rel = new elf32_rel();
