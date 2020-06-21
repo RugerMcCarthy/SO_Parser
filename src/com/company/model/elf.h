@@ -204,6 +204,14 @@ typedef struct elf32_hdr{
   Elf32_Half	e_shstrndx;
 } Elf32_Ehdr;
 
+//typedef __u64	Elf64_Addr;
+//typedef __u16	Elf64_Half;
+//typedef __s16	Elf64_SHalf;
+//typedef __u64	Elf64_Off;
+//typedef __s32	Elf64_Sword;
+//typedef __u32	Elf64_Word;
+//typedef __u64	Elf64_Xword;
+//typedef __s64	Elf64_Sxword;
 typedef struct elf64_hdr {
   unsigned char	e_ident[EI_NIDENT];	/* ELF "magic number" */
   Elf64_Half e_type;
@@ -238,6 +246,14 @@ typedef struct elf32_phdr{
   Elf32_Word	p_align;
 } Elf32_Phdr;
 
+//typedef __u64	Elf64_Addr;
+//typedef __u16	Elf64_Half;
+//typedef __s16	Elf64_SHalf;
+//typedef __u64	Elf64_Off;
+//typedef __s32	Elf64_Sword;
+//typedef __u32	Elf64_Word;
+//typedef __u64	Elf64_Xword;
+//typedef __s64	Elf64_Sxword;
 typedef struct elf64_phdr {
   Elf64_Word p_type;
   Elf64_Word p_flags;
@@ -296,6 +312,14 @@ typedef struct {
   Elf32_Word	sh_entsize;
 } Elf32_Shdr;
 
+//typedef __u64	Elf64_Addr;
+//typedef __u16	Elf64_Half;
+//typedef __s16	Elf64_SHalf;
+//typedef __u64	Elf64_Off;
+//typedef __s32	Elf64_Sword;
+//typedef __u32	Elf64_Word;
+//typedef __u64	Elf64_Xword;
+//typedef __s64	Elf64_Sxword;
 typedef struct elf64_shdr {
   Elf64_Word sh_name;		/* Section name, index in string tbl */
   Elf64_Word sh_type;		/* Type of section */

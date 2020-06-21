@@ -2,8 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84e4ff1b-8d14-416f-89fd-6bf29e3e17cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/model/ElfEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/so/libJniDemo.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/so/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/META-INF/parseSo.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/Utils/ParseType32Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/Utils/ParseType32Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/Utils/ParseType64Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/Utils/ParseType64Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/Utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$Elf32_Sym.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$Elf32_Sym.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_hdr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_hdr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_phdr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_phdr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_rel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_rel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_rela.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_rela.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_shdr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_shdr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32$elf32_strtb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_hdr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_hdr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_phdr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_phdr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_rel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_rel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_rela.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_rela.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_shdr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_shdr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_sym.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64$elf64_sym.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/ElfType64.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/parseSo/com/company/model/elf.h" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseSo/com/company/model/elf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Utils/ParseType64Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Utils/ParseType64Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/model/ElfType32.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/ElfType32.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/model/ElfType64.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/ElfType64.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/model/elf.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/elf.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -30,6 +61,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/company/so" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -39,6 +71,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/company/model" />
       <recent name="$PROJECT_DIR$/src/com/company/elf" />
+      <recent name="$PROJECT_DIR$/src/com/company/so" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/company/so" />
     </key>
   </component>
@@ -69,6 +104,12 @@
       <option name="presentableId" value="Default" />
       <updated>1587740213729</updated>
       <workItem from="1587740217810" duration="12709000" />
+      <workItem from="1589613303428" duration="404000" />
+      <workItem from="1589624833253" duration="9821000" />
+      <workItem from="1589694686638" duration="7000" />
+      <workItem from="1589707296889" duration="2315000" />
+      <workItem from="1589897127386" duration="21000" />
+      <workItem from="1592737303907" duration="13199000" />
     </task>
     <servers />
   </component>
@@ -84,30 +125,66 @@
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
     <state x="360" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1005@0.23.1792.1005" timestamp="1587742672548" />
-    <state x="600" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587741099076">
+    <state x="600" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589628076174">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state x="600" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1005@0.23.1792.1005" timestamp="1587741099076" />
-    <state width="1750" height="254" key="GridCell.Tab.0.bottom" timestamp="1587789415315">
+    <state x="600" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1005@0.23.1792.1005" timestamp="1589628076174" />
+    <state x="699" y="378" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1592744308467">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state width="1750" height="254" key="GridCell.Tab.0.bottom/0.23.1792.1005@0.23.1792.1005" timestamp="1587789415315" />
-    <state width="1750" height="254" key="GridCell.Tab.0.center" timestamp="1587789415315">
+    <state x="699" y="378" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.23.1792.1005@0.23.1792.1005" timestamp="1592744308467" />
+    <state width="546" height="634" key="DebuggerActiveHint" timestamp="1592750484489">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state width="1750" height="254" key="GridCell.Tab.0.center/0.23.1792.1005@0.23.1792.1005" timestamp="1587789415315" />
-    <state width="1750" height="254" key="GridCell.Tab.0.left" timestamp="1587789415314">
+    <state width="546" height="634" key="DebuggerActiveHint/0.23.1792.1005@0.23.1792.1005" timestamp="1592750484489" />
+    <state width="1750" height="254" key="GridCell.Tab.0.bottom" timestamp="1592751588809">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state width="1750" height="254" key="GridCell.Tab.0.left/0.23.1792.1005@0.23.1792.1005" timestamp="1587789415314" />
-    <state width="1750" height="254" key="GridCell.Tab.0.right" timestamp="1587789415315">
+    <state width="1750" height="254" key="GridCell.Tab.0.bottom/0.23.1792.1005@0.23.1792.1005" timestamp="1592751588809" />
+    <state width="1750" height="317" key="GridCell.Tab.0.bottom/0.23.1792.1006@0.23.1792.1006" timestamp="1592750986499" />
+    <state width="1750" height="254" key="GridCell.Tab.0.center" timestamp="1592751588808">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state width="1750" height="254" key="GridCell.Tab.0.right/0.23.1792.1005@0.23.1792.1005" timestamp="1587789415315" />
-    <state x="396" y="163" key="SettingsEditor" timestamp="1587743218043">
+    <state width="1750" height="254" key="GridCell.Tab.0.center/0.23.1792.1005@0.23.1792.1005" timestamp="1592751588808" />
+    <state width="1750" height="317" key="GridCell.Tab.0.center/0.23.1792.1006@0.23.1792.1006" timestamp="1592750986497" />
+    <state width="1750" height="254" key="GridCell.Tab.0.left" timestamp="1592751588808">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state x="396" y="163" key="SettingsEditor/0.23.1792.1005@0.23.1792.1005" timestamp="1587743218043" />
+    <state width="1750" height="254" key="GridCell.Tab.0.left/0.23.1792.1005@0.23.1792.1005" timestamp="1592751588808" />
+    <state width="1750" height="317" key="GridCell.Tab.0.left/0.23.1792.1006@0.23.1792.1006" timestamp="1592750986497" />
+    <state width="1750" height="254" key="GridCell.Tab.0.right" timestamp="1592751588809">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state width="1750" height="254" key="GridCell.Tab.0.right/0.23.1792.1005@0.23.1792.1005" timestamp="1592751588809" />
+    <state width="1750" height="317" key="GridCell.Tab.0.right/0.23.1792.1006@0.23.1792.1006" timestamp="1592750986498" />
+    <state width="1750" height="317" key="GridCell.Tab.1.bottom" timestamp="1592751268660">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state width="1750" height="317" key="GridCell.Tab.1.bottom/0.23.1792.1005@0.23.1792.1005" timestamp="1592751268660" />
+    <state width="1750" height="317" key="GridCell.Tab.1.bottom/0.23.1792.1006@0.23.1792.1006" timestamp="1592750980888" />
+    <state width="1750" height="317" key="GridCell.Tab.1.center" timestamp="1592751268660">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state width="1750" height="317" key="GridCell.Tab.1.center/0.23.1792.1005@0.23.1792.1005" timestamp="1592751268660" />
+    <state width="1750" height="317" key="GridCell.Tab.1.center/0.23.1792.1006@0.23.1792.1006" timestamp="1592750980886" />
+    <state width="1750" height="317" key="GridCell.Tab.1.left" timestamp="1592751268659">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state width="1750" height="317" key="GridCell.Tab.1.left/0.23.1792.1005@0.23.1792.1005" timestamp="1592751268659" />
+    <state width="1750" height="317" key="GridCell.Tab.1.left/0.23.1792.1006@0.23.1792.1006" timestamp="1592750980886" />
+    <state width="1750" height="317" key="GridCell.Tab.1.right" timestamp="1592751268660">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state width="1750" height="317" key="GridCell.Tab.1.right/0.23.1792.1005@0.23.1792.1005" timestamp="1592751268660" />
+    <state width="1750" height="317" key="GridCell.Tab.1.right/0.23.1792.1006@0.23.1792.1006" timestamp="1592750980887" />
+    <state x="396" y="163" key="SettingsEditor" timestamp="1589869697170">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state x="396" y="163" key="SettingsEditor/0.23.1792.1005@0.23.1792.1005" timestamp="1589869697170" />
+    <state x="556" y="358" key="com.intellij.ide.util.TipDialog" timestamp="1592737304478">
+      <screen x="0" y="23" width="1792" height="1005" />
+    </state>
+    <state x="556" y="358" key="com.intellij.ide.util.TipDialog/0.23.1792.1005@0.23.1792.1005" timestamp="1592737304478" />
     <state x="544" y="266" width="703" height="518" key="find.popup" timestamp="1587742788345">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
@@ -116,9 +193,40 @@
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
     <state x="561" y="243" key="run.anything.popup/0.23.1792.1005@0.23.1792.1005" timestamp="1587745525418" />
-    <state x="561" y="245" width="670" height="676" key="search.everywhere.popup" timestamp="1587788783993">
+    <state x="561" y="245" width="670" height="676" key="search.everywhere.popup" timestamp="1592739493206">
       <screen x="0" y="23" width="1792" height="1005" />
     </state>
-    <state x="561" y="245" width="670" height="676" key="search.everywhere.popup/0.23.1792.1005@0.23.1792.1005" timestamp="1587788783993" />
+    <state x="561" y="245" width="670" height="676" key="search.everywhere.popup/0.23.1792.1005@0.23.1792.1005" timestamp="1592739493206" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Utils/ParseType32Utils.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

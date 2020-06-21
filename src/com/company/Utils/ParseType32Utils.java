@@ -1,5 +1,6 @@
 package com.company.Utils;
 
+import com.company.model.ElfEnum;
 import com.company.model.ElfType32;
 
 public class ParseType32Utils {
@@ -7,6 +8,7 @@ public class ParseType32Utils {
 
     private static int SECTION_HEADER_SIZE = 40;
     private static int PROGRAM_HEADER_SIZE = 32;
+    private static int SYMBOL_TABLE_SIZE = 16;
 
     public static void parseELFHeader(byte[] fileByteArys) {
         if (fileByteArys == null) {
@@ -83,18 +85,113 @@ public class ParseType32Utils {
         return programHeader;
     }
 
-    public static void printSo() {
-        if (elfContent == null) {
+    public static void parseDynamicSegment(byte[] fileByteArys, String funcName) {
+        boolean hasFoundDynamicSeg = false;
+        int dynamicSegOffset = 0;
+        int dynamicSegFileSize = 0;
+        for (ElfType32.elf32_phdr phdr : elfContent.phdrList) {
+            if (Utils.byte2Int(phdr.p_type) == ElfEnum.PT_DYNAMIC) {
+                hasFoundDynamicSeg = true;
+                dynamicSegOffset = Utils.byte2Int(phdr.p_offset);
+                dynamicSegFileSize = Utils.byte2Int(phdr.p_filesz);
+            }
+        }
+        if (!hasFoundDynamicSeg) {
+            System.out.println("未找到Dynamic Seg");
             return;
         }
-        System.out.println("+++++++++++++++++ELF Header+++++++++++++++++");
-        System.out.println(elfContent.hdr);
-        System.out.println();
-        System.out.println("+++++++++++++++++Program Header+++++++++++++++++");
-        elfContent.printPhdrList();
-        System.out.println();
-        System.out.println("+++++++++++++++++Section Header+++++++++++++++++");
-        elfContent.printShdrList();
-        System.out.println();
+        int sectionSize = 8;
+        int symbolTableSize = 16;
+        int sectionCount = dynamicSegFileSize / sectionSize;
+        for (int i = 0; i < sectionCount; ++i) {
+            byte[] dest = new byte[sectionSize];
+            System.arraycopy(fileByteArys, i * sectionSize + dynamicSegOffset, dest, 0, sectionSize);
+            elfContent.dynamicList.add(getDynamicHeader(dest));
+        }
+
+        int dynSymbolOffset = 0;
+        int dynStrOffset = 0;
+        int dynHashOffset = 0;
+        int dynStrSize = 0;
+        for (ElfType32.elf32_dynamic dynamic : elfContent.dynamicList) {
+            switch (Utils.byte2Int(dynamic.d_tag)) {
+                case ElfEnum.DT_SYMTAB:
+                    dynSymbolOffset = Utils.byte2Int(dynamic.d_val);
+                    break;
+                case ElfEnum.DT_STRTAB:
+                    dynStrOffset = Utils.byte2Int(dynamic.d_val);
+                    break;
+                case ElfEnum.DT_HASH:
+                    dynHashOffset = Utils.byte2Int(dynamic.d_val);
+                    break;
+                case ElfEnum.DT_STRSZ:
+                    dynStrSize = Utils.byte2Int(dynamic.d_val);
+                    break;
+            }
+        }
+        byte[] dynSymbolStringPool = Utils.copyBytes(fileByteArys, dynStrOffset, dynStrSize);
+        int nBucket = Utils.byte2Int(Utils.copyBytes(fileByteArys, dynHashOffset, 4));
+        int nChain = Utils.byte2Int(Utils.copyBytes(fileByteArys, dynHashOffset + 4, 4));
+        int funcHashName = getFuncHashName(funcName) % nBucket;
+        int funcIndex = Utils.byte2Int(Utils.copyBytes(fileByteArys, dynHashOffset + (2 + funcHashName) * 4, 4));
+        byte[] symbolTable = Utils.copyBytes(fileByteArys, dynSymbolOffset + funcIndex * SYMBOL_TABLE_SIZE, SYMBOL_TABLE_SIZE);
+        ElfType32.elf32_sym sym = parseSymbolTable(symbolTable);
+        String foundFuncName = getStringFromPool(dynSymbolStringPool, Utils.byte2Int(sym.st_name));
+        if (funcName != null && funcName.equals(foundFuncName)) {
+            System.out.println("func address has found: " + Utils.byte2Int(sym.st_value));
+            return;
+        }
+        while (true) {
+            funcIndex = Utils.byte2Int(Utils.copyBytes(fileByteArys, dynHashOffset + (2 + nBucket + funcIndex) * 4, 4));
+            symbolTable = Utils.copyBytes(fileByteArys, dynSymbolOffset + funcIndex * SYMBOL_TABLE_SIZE, SYMBOL_TABLE_SIZE);
+            sym = parseSymbolTable(symbolTable);
+            foundFuncName = getStringFromPool(dynSymbolStringPool, Utils.byte2Int(sym.st_name));
+            if (funcName != null && funcName.equals(foundFuncName)) {
+                System.out.println("func address: " + Utils.byte2Int(sym.st_value));
+                return;
+            }
+        }
+    }
+
+    public static ElfType32.elf32_sym parseSymbolTable(byte[] data) {
+        ElfType32.elf32_sym sym = new ElfType32.elf32_sym();
+        sym.st_name = Utils.copyBytes(data, 0, 4);
+        sym.st_value = Utils.copyBytes(data, 4, 4);
+        sym.st_size = Utils.copyBytes(data, 8, 4);
+        sym.st_info = Utils.copyBytes(data, 12, 1);
+        sym.st_other = Utils.copyBytes(data, 13 , 1);
+        sym.st_shndx = Utils.copyBytes(data, 14, 2);
+        return sym;
+    }
+
+    public static ElfType32.elf32_dynamic getDynamicHeader(byte[] header) {
+        ElfType32.elf32_dynamic dynamic = new ElfType32.elf32_dynamic();
+        dynamic.d_tag = Utils.copyBytes(header, 0, 4);
+        dynamic.d_val = Utils.copyBytes(header, 4, 4);
+        return dynamic;
+    }
+
+    private static int getFuncHashName(String name){
+        if(name == null || name.length() == 0){
+            return -1;
+        }
+        long h=0, g;
+        for(int i=0;i<name.length();i++){
+            h = (h << 4) + (int)name.charAt(i);
+            g = h & 0xf0000000;
+            h ^= g;
+            h ^= (g >> 24);
+        }
+        return (int)h;
+    }
+
+    public static String getStringFromPool(byte[] pool, int offset) {
+        StringBuilder result = new StringBuilder();
+        int length = 0;
+        while (pool[offset + length] != 0) {
+            result.append((char)pool[offset + length]);
+            length++;
+        }
+        return result.toString();
     }
 }

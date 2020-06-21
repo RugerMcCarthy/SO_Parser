@@ -30,7 +30,22 @@ public final class Utils {
     public static String bytes2HexString(byte[] bytes){
         StringBuilder result = new StringBuilder();
         for(int i=bytes.length-1;i>=0;i--){
-            String hex = Integer.toHexString(bytes[i]);
+            String hex = Integer.toHexString(bytes[i] & 0xFF);
+            if(hex.length() < 2){
+                result.append("0"+hex);
+            }else{
+                result.append(hex);
+            }
+            result.append(" ");
+        }
+        return result.toString();
+
+    }
+
+    public static String bytes2HexStringReverse(byte[] bytes){
+        StringBuilder result = new StringBuilder();
+        for(int i=0;i<bytes.length;i++){
+            String hex = Integer.toHexString(bytes[i] & 0xFF);
             if(hex.length() < 2){
                 result.append("0"+hex);
             }else{
@@ -229,6 +244,20 @@ public final class Utils {
             i++;
         }
         return bytes;
+    }
+
+    public static boolean isElfFile(byte[] head) {
+        if (head != null && head.length > 4) {
+            if (head[0] == 0x7f && head[1] == 0x45 && head[2] == 0x4c && head[3] == 0x46) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    public static boolean isElf32Bit(byte[] head) {
+        return head[4] == 1;
     }
 
 }
